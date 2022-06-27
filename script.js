@@ -1,23 +1,23 @@
-const inputBookTitle = document.getElementById("title");
-const inputBookAuthor = document.getElementById("author");
-const addBookButton = document.querySelector(".addButton");
-const bookContainer = document.getElementById("bookscontainer");
+const inputBookTitle = document.getElementById('title');
+const inputBookAuthor = document.getElementById('author');
+const addBookButton = document.querySelector('.addButton');
+const bookContainer = document.getElementById('bookscontainer');
 
 function addBooks(title, author) {
-  const books = JSON.parse(window.localStorage.getItem("BookList") || "[]");
+  const books = JSON.parse(window.localStorage.getItem('BookList') || '[]');
   const newBook = { title, author };
   books.push(newBook);
-  window.localStorage.setItem("BookList", JSON.stringify(books));
+  window.localStorage.setItem('BookList', JSON.stringify(books));
 }
 
 function removeBook(title) {
-  const books = JSON.parse(window.localStorage.getItem("BookList"));
+  const books = JSON.parse(window.localStorage.getItem('BookList'));
   const keptBooks = books.filter((book) => book.title !== title);
-  window.localStorage.setItem("BookList", JSON.stringify(keptBooks));
+  window.localStorage.setItem('BookList', JSON.stringify(keptBooks));
 }
 
 function listBooks() {
-  const books = JSON.parse(window.localStorage.getItem("BookList"));
+  const books = JSON.parse(window.localStorage.getItem('BookList'));
   books.forEach((book) => {
     bookContainer.innerHTML += `
         <article>
@@ -27,9 +27,9 @@ function listBooks() {
         <hr>
         </article>`;
 
-    const removeButton = document.querySelectorAll(".removeBtn");
+    const removeButton = document.querySelectorAll('.removeBtn');
     removeButton.forEach((btn) => {
-      btn.addEventListener("click", (index) => {
+      btn.addEventListener('click', (index) => {
         const targetClass = index.target.parentElement;
         const stringTitle = targetClass.childNodes[1].textContent;
         removeBook(stringTitle);
@@ -39,10 +39,10 @@ function listBooks() {
   });
 }
 listBooks();
-addBookButton.addEventListener("click", () => {
+addBookButton.addEventListener('click', () => {
   addBooks(inputBookTitle.value, inputBookAuthor.value);
-  bookContainer.innerHTML = "";
+  bookContainer.innerHTML = '';
   listBooks();
-  inputBookTitle.value = "";
-  inputBookAuthor.value = "";
+  inputBookTitle.value = '';
+  inputBookAuthor.value = '';
 });
