@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 const inputBookTitle = document.getElementById('title');
 const inputBookAuthor = document.getElementById('author');
 const addBookButton = document.querySelector('.addButton');
@@ -17,12 +18,12 @@ function removeBook(title) {
 }
 
 function listBooks() {
-  const books = JSON.parse(window.localStorage.getItem('BookList'));
-  books.forEach((book) => {
+  const books = JSON.parse(window.localStorage.getItem('BookList') || '[]');
+  for (let i = 0; i < books.length; i += 1) {
     bookContainer.innerHTML += `
         <article>
-        <p class="book-title">${book.title}</p>
-        <p class="book-author">${book.author}</p>
+        <p class="book-title">${books[i].title}</p>
+        <p class="book-author">${books[i].author}</p>
         <button class="removeBtn">Remove</button>
         <hr>
         </article>`;
@@ -36,7 +37,7 @@ function listBooks() {
         index.target.parentElement.remove();
       });
     });
-  });
+  }
 }
 listBooks();
 addBookButton.addEventListener('click', () => {
