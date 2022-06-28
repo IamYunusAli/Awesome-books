@@ -8,19 +8,23 @@
     <title>Awesome Books</title>
 </head>
 <body>
-    <h1>Awesome books</h1>
-    <div id="bookscontainer">
-
-    </div>
-    <form action="#" id="Add-book">
-        <input type="text" placeholder="Title" id="title" required>
-        <br>
-        <br>
-        <input type="text" placeholder="Author" id="author" required>
-        <br>
-        <br>
-        <button type="button" class="addButton">Add</button>
-    </form>
+    <main>
+        <h1>All awesome books</h1>
+        <div id="bookscontainer">
+        </div>
+        <hr>
+        <h1>Add a new book</h1>
+        <form action="#" id="Add-book">
+            <input type="text" placeholder="Title" id="title" required>
+            <br>
+            <input type="text" placeholder="Author" id="author" required>
+            <br>
+            <div class="adddiv">
+                <button type="button" class="addButton">Add</button>
+            </div>
+            <p class="errorMe hide">The input field cannot be empty</p>
+        </form>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
