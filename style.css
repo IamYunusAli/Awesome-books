@@ -80,9 +80,15 @@ input {
 .addButton {
   height: 30px;
   border-radius: 5px;
-  border: 2px solid black;
+  background-color: rgb(61, 146, 61);
+  border: 2px solid rgb(0, 0, 0);
   cursor: pointer;
   font-weight: 600;
   margin: 5px 10px ;
   box-shadow: 3px 3px rgb(7, 7, 7);
+}
+
+.removeBtn {
+  background-color: red;
+  color: white;
 }
