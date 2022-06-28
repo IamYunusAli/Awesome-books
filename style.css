@@ -1,3 +1,88 @@
 body {
   box-sizing: border-box;
+  font-family: 'Patrick Hand', cursive;
+}
+
+#bookscontainer {
+  border: 3px solid black;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.book-list {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.p-list {
+  display: flex;
+  flex-direction: row;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.p-list p {
+  margin: 0;
+  padding: 10px;
+}
+
+.book-list:nth-child(odd) {
+  background-color: #ddd;
+}
+
+hr {
+  width: 30%;
+  height: 2px;
+  background-color: black;
+}
+
+form {
+  width: 250px;
+
+}
+
+input {
+  width: 100%;
+  margin: 10px 0 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+
+.adddiv {
+  padding: 8px 0 8px 0;
+  width: 100%;
+  text-align: end;
+}
+
+#addBtn {
+  padding: 5px;
+}
+
+.errorMe {
+  display: block;
+  color: red;
+}
+
+.hide {
+  display: none;
+}
+
+.removeBtn,
+.addButton {
+  height: 30px;
+  border-radius: 5px;
+  border: 2px solid black;
+  cursor: pointer;
+  font-weight: 600;
+  margin: 5px 10px ;
+  box-shadow: 3px 3px rgb(7, 7, 7);
 }
