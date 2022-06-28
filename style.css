@@ -46,7 +46,6 @@ hr {
 
 form {
   width: 250px;
-
 }
 
 input {
@@ -84,7 +83,7 @@ input {
   border: 2px solid rgb(0, 0, 0);
   cursor: pointer;
   font-weight: 600;
-  margin: 5px 10px ;
+  margin: 5px 10px;
   box-shadow: 3px 3px rgb(7, 7, 7);
 }
 
