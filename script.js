@@ -48,7 +48,6 @@ class BookClass {
   }
 }
 BookClass.listBooks();
-
 addBookButton.addEventListener('click', () => {
   if (inputBookTitle.value === '' || inputBookAuthor.value === '') {
     notifier.classList.remove('hide');
