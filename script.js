@@ -2,8 +2,14 @@
 const inputBookTitle = document.getElementById('title');
 const inputBookAuthor = document.getElementById('author');
 const addBookButton = document.querySelector('.addButton');
-const bookContainer = document.getElementById('bookscontainer');
+const bookContainer = document.querySelector('.bookscontainer');
+const bookCont= document.querySelector('.bookcont')
+const addBook = document.getElementById('Add-book');
+const addContact= document.getElementById('contact');
 const notifier = document.querySelector('.errorMe');
+const addLink = document.querySelector('.add-link');
+const listLink = document.querySelector('.list-link');
+const contactLink = document.querySelector('.contact-link');
 class BookClass {
   constructor(title, author) {
     this.title = title;
@@ -60,3 +66,19 @@ addBookButton.addEventListener('click', () => {
     inputBookAuthor.value = '';
   }
 });
+
+listLink.addEventListener('click', () => {
+  bookCont.classList.remove('hide');
+  addContact.classList.add('hide');
+  addBook.classList.add('hide');
+});
+addLink.addEventListener('click', () => {
+  addBook.classList.remove('hide');
+  addContact.classList.add('hide');
+  bookCont.classList.add('hide');
+})
+contactLink.addEventListener('click', () => {
+  addContact.classList.remove('hide');
+  addBook.classList.add('hide');
+  bookCont.classList.add('hide');
+})
