@@ -8,13 +8,26 @@
     <title>Awesome Books</title>
 </head>
 <body>
-    <main>
-        <h1>All awesome books</h1>
-        <div id="bookscontainer">
+    <nav>
+        <a href="#"><h1>Awesome Books</h1></a>
+        <div class="nav-link">
+            <a class="list-link active" href="#">List</a>
+            <a class="add-link" href="#">Add new</a>
+            <a class="contact-link" href="#">Contact</a>
         </div>
-        <hr>
-        <h1>Add a new book</h1>
-        <form action="#" id="Add-book">
+    </nav>
+    <main>
+
+        <div class="bookcont">
+            <h1>All awesome books</h1>
+            <div class="bookscontainer">
+
+            </div>
+        </div>
+
+
+        <form action="#" id="Add-book" class="hide">
+            <h1>Add a new book</h1>
             <input type="text" placeholder="Title" id="title" required>
             <br>
             <input type="text" placeholder="Author" id="author" required>
@@ -24,7 +37,20 @@
             </div>
             <p class="errorMe hide">The input field cannot be empty</p>
         </form>
+        <div id="contact" class="hide">
+            <h2 class="text-center">Contact information</h2>
+            <p>Do have any questions or just want to say "Hello"? You can reach out to us!</p>
+            <ul>
+                <li>Our e-mail: aliyunus291@mail.com</li>
+                <li>Our phone number: +251923044519</li>
+                <li>Our address: Bole Michael: Addis Ababa, Ethiopia</li>
+            </ul>
+        </div>
+
     </main>
-    <script src="script.js"></script>
+    <footer class="copyright">
+        <p>Copyright   ...</p>
+    </footer>
+<script src="script.js"></script>
 </body>
 </html>
