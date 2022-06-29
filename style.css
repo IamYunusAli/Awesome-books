@@ -3,17 +3,56 @@ body {
   font-family: 'Patrick Hand', cursive;
 }
 
-#bookscontainer {
+.bookcont {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.bookscontainer {
   border: 3px solid black;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   margin-bottom: 50px;
+  align-items: center;
+  margin: 10px;
 }
 
 main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 3px solid black;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-link a {
+  margin-right: 30px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.nav-link a:hover {
+  color: blue;
+}
+
+.active {
+  color: blue;
 }
 
 .book-list {
@@ -90,4 +129,19 @@ input {
 .removeBtn {
   background-color: red;
   color: white;
+}
+
+.contact-info {
+  margin-top: 100px;
+}
+
+.copyright {
+  justify-content: flex-end;
+  font-size: 17px;
+  font-weight: bold;
+  border: 3px solid black;
+  width: 100%;
+  position: fixed;
+  left: 5px;
+  bottom: 2px;
 }
